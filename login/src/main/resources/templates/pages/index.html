@@ -14,7 +14,7 @@
 <body>
 
     <div class="d-flex flex-column">
-        <h1 class="text-white">Olá, você efetuou login</h1>
+        <h1 class="text-white">Olá <span th:text="${session.usuarioLogado.user}"></span>, você efetuou login com sucesso!</h1>
         <form action="logout" method="post" class="d-flex justify-content-center">
             <button type="submit" class="btn btn-danger">Sair</button>
         </form>

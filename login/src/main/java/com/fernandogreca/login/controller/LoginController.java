@@ -63,7 +63,7 @@ public class LoginController {
 
             return mv;
         } catch (NoSuchAlgorithmException | ServiceExc e) {
-            mv.addObject("msgErroLogin", "Usuário não encontrado. Tente Novamente");
+            mv.addObject("msgErroLogin", "Usuário não encontrado. Tente Novamente!");
             mv.setViewName("login/login");
         }
         

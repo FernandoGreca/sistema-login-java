@@ -10,11 +10,32 @@
     <!-- LINK CSS -->
     <link rel="stylesheet" href="/css/login.css">
     <title>System | Cadastro</title>
+
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
     <div class="login">
         <form action="login" method="post">
+
+            <div class="mb-3">
+                <h1>Login</h1>
+                <h5>Digite sua credencial para efetuar login</h5>
+                <hr>
+
+                <div class="alert alert-danger" role="alert" th:if= "${msgErroLogin}">
+                    <strong th:text="${msgErroLogin}" class="text-center"></strong>
+                </div>
+            </div>
+
             <div class="mb-3">
                 <label class="form-label">Username: </label>
                 <input type="text" class="form-control" name="user" placeholder="Ex: JoãoMelo">
@@ -23,7 +44,7 @@
                 <label class="form-label">Senha: </label>
                 <input type="password" class="form-control" name="senha" placeholder="Senha">
                 <div class="registrar my-2">
-                    <a th:href= "@{/cadastro}">Não possui conta? Registre-se aqui!</a>
+                    <a th:href= "@{/cadastro}" class="text-light" >Não possui conta? Registre-se aqui!</a>
                 </div>
             </div>
             <div class="mb-3 botao-login">

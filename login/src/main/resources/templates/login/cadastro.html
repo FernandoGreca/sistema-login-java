@@ -15,6 +15,17 @@
 
     <div class="login">
         <form action="salvarUsuario" method="post" th:object="${usuario}">
+
+            <div class="mb-3">
+                <h1>Cadastro</h1>
+                <h5>Preencha o formulário para realizar cadastro</h5>
+                <hr>
+
+                <div class="alert alert-danger" role="alert" th:if= "${msgErroCadastro}">
+                    <strong th:text="${msgErroCadastro}"></strong>
+                </div>
+            </div>
+
             <div class="mb-3">
                 <label class="form-label">Email: </label>
                 <input type="text" class="form-control" data-th-field="*{email}" placeholder="Ex: teste@gmail.com">

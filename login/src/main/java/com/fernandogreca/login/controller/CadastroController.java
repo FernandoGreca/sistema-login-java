@@ -35,7 +35,7 @@ public class CadastroController {
         ModelAndView mv = new ModelAndView();
 
         if (br.hasErrors()) {
-            mv.addObject("msgErroCadastro", "Preencha todos os campos corretamente para completar o cadastro");
+            mv.addObject("msgErroCadastro", "Preencha todos os campos corretamente para completar o cadastro.");
             mv.setViewName("login/cadastro");
         } else {
             try {
