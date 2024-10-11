@@ -9,26 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- LINK CSS -->
     <link rel="stylesheet" href="/css/login.css">
-    <title>System | Cadastro</title>
+    <title>System | Login</title>
 </head>
 <body>
 
-    <div class="login">
-        <form action="login" method="post">
-            <div class="mb-3">
-                <label class="form-label">Username: </label>
-                <input type="text" class="form-control" name="user" placeholder="Ex: JoãoMelo">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Senha: </label>
-                <input type="password" class="form-control" name="senha" placeholder="Senha">
-                <div class="registrar my-2">
-                    <a th:href= "@{/cadastro}">Não possui conta? Registre-se aqui!</a>
-                </div>
-            </div>
-            <div class="mb-3 botao-login">
-                <button type="submit" class="btn btn-primary">Login</button>
-            </div>
+    <div class="d-flex flex-column">
+        <h1 class="text-white">Olá, você efetuou login</h1>
+        <form action="logout" method="post" class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-danger">Sair</button>
         </form>
     </div>
     
