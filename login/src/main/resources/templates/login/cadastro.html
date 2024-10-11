@@ -14,18 +14,18 @@
 <body>
 
     <div class="login">
-        <form action="" method="post">
+        <form action="salvarUsuario" method="post" th:object="${usuario}">
             <div class="mb-3">
                 <label class="form-label">Email: </label>
-                <input type="text" class="form-control" placeholder="Ex: teste@gmail.com">
+                <input type="text" class="form-control" data-th-field="*{email}" placeholder="Ex: teste@gmail.com">
             </div>
             <div class="mb-3">
                 <label class="form-label">Username: </label>
-                <input type="text" class="form-control" placeholder="Ex: JoãoMelo">
+                <input type="text" class="form-control" data-th-field="*{user}" placeholder="Ex: JoãoMelo">
             </div>
             <div class="mb-3">
                 <label class="form-label">Senha: </label>
-                <input type="password" class="form-control" placeholder="Senha">
+                <input type="password" class="form-control" data-th-field="*{senha}" placeholder="Senha">
             </div>
             <div class="mb-3 botao-login">
                 <button type="submit" class="btn btn-primary">Login</button>
