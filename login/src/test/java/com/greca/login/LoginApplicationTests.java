@@ -1,10 +1,10 @@
-package com.fernandologin.sistemalogin;
+package com.greca.login;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SistemaloginApplicationTests {
+class LoginApplicationTests {
 
 	@Test
 	void contextLoads() {
